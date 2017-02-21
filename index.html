@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>	
+    <meta charset="UTF-8">
+    <title>CS 290 USDA Food How-To Guide</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+  	<fieldset>
+		<label for="food">Food:</label>
+		<input type="text" name="foodEntry" id="foodEntry"></input>
+		<input type="submit" id="submit"></input>
+	</fieldset>
+	<div id="results">
+		<ul id="items"></ul>
+	</div>
+	<div id="report" class="hidden">
+		<div id="info"
+			<h2 id="reportTitle">KETO REPORT CARD<h2>
+				<h4 id="foodName">Food: </li>
+				<h4 id="protein">Protein: </li>
+				<h4 id="fat">Fat: </li>
+				<h4 id="carbs">Carbs: </li>	
+			<h1 id="grade"></h1>
+			<p id="gradeDesc"></p>
+			
+		</div>
+		<div id="chart">
+			<canvas id="piechart" width="350" height="350" ></canvas>	
+			<dl>
+				<dt id="orange"></dt>
+				<dd> - Protein </dd><br>
+
+				<dt id="purple"></dt>
+				<dd> - Fat</dd><br>
+
+				<dt id="blue"></dt>
+				<dd> - Carbs </dd>
+			</dl>
+		</div>
+	</div>
+  </body>
+  	<script src="chart.js"></script> 
+	<script src="usdaFood.js"></script> 
+</html>
