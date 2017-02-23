@@ -1,4 +1,4 @@
-var colors = ["#FFDAB9", "#E6E6FA", "#E0FFFF"];
+var colors = ["#45B29D", "#EFC94C", "#E27A3F"];
 
 function drawSegment(canvas, context, i, data) {
     context.save();

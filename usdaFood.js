@@ -32,6 +32,7 @@ function createList(response){
 	 
 		listItem.id = results[i].ndbno;
 		listItem.addEventListener("click", itemClick);
+		listItem.classList.add("list-group-item");
 		listItem.appendChild(itemName);
 	
 		document.getElementById("items").appendChild(listItem);	
@@ -40,6 +41,14 @@ function createList(response){
 }
 
 function itemClick(event){
+	var list = document.getElementById("items");
+	var listItems = list.getElementsByTagName("li");
+	for (var i = 0; i < listItems.length; ++i) {
+		listItems[i].classList.remove("selected");
+	}
+	
+	this.classList.add("selected");
+	
 	var request = new XMLHttpRequest();
     var food = {ndbno: this.id};
     request.open('GET', 'https://api.nal.usda.gov/ndb/reports/?ndbno=' + food.ndbno +'&type=b&format=json&api_key=' + apiKey, true);
@@ -65,9 +74,14 @@ function createReport(response){
 
 	var reportCard = document.getElementById("report");
     if(reportCard.className == 'hidden'){
-        reportCard.className = 'unhidden' ;
+        reportCard.className = 'unhidden';
     }
 	
+	document.getElementById("protein").innerHTML = "<b>Protein: </b>" + parseFloat(Math.round(nutrients[2].value * 100)/ total).toFixed(2) + "%";
+	document.getElementById("fat").innerHTML = "<b>Fat: </b>" + parseFloat(Math.round(nutrients[3].value * 100)/ total).toFixed(2) + "%";
+	document.getElementById("carbs").innerHTML = "<b>Carbs: </b>" + parseFloat(Math.round(nutrients[4].value * 100)/ total).toFixed(2) + "%";
+	
+	/* Draw chart */
 	canvas = document.getElementById("piechart");
 	var context = canvas.getContext("2d");
 	for (var i = 0; i < data.length; i++) {

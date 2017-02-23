@@ -1,0 +1,132 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display: block;
+}
+
+.selected{
+    background-color: salmon;
+}
+
+#header{
+	margin: auto;
+	width: 800px;
+	background-color: #334D5C;
+	height: 50px;
+}
+
+fieldset{
+	padding: 30px 40px;
+	text-align: center;
+	background-color: #334D5C;
+}
+
+#fieldLabel{
+	color: white;
+	size: 12;
+}
+
+li{
+	font-style: bold;
+	background-color: #F3F3F3;
+	padding: 12px 8px 12px 8px;
+	list-style-type: none;
+	border-width: 1px;
+	border-color: black;
+}
+
+#items{
+	padding: 0px;
+	margin: auto;
+	width: 800px;
+	background-color: green;
+}
+
+#report{
+	margin: auto;
+	position: relative;
+	border-radius: 25px;
+	border: 1px solid darkgrey;
+	height: 500px;
+	width: 800px;
+	background-color: white;
+}
+
+h1{
+	font-weight: bold;
+	font-size: 42px;
+}
+
+h2{
+	padding: 0px 0px 0px 30px;
+}
+
+#info{
+	font-weight: bold;
+	position: absolute;
+	padding: 0px 0px 0px 30px;
+	top: 5%;
+	left: 2%;
+	width: 310px;
+	height: 90%
+}
+#chart{
+	position: absolute;
+	height: 90%;
+	right: 5%;
+	top: 5%;
+}
+#key{
+	position: center;
+	margin: 10px 0px 0px 110px;
+}
+
+
+
+dl{
+    width: 200px;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 5px 15px;
+}
+
+dt, dd{
+    display: inline;
+}      
+
+#proteinKey{
+	height: 10px;
+	width: 50%;
+	background-color: #45B29D;
+}
+
+#fatKey{
+	height: 10px;
+	width: 50%;
+	background-color: #EFC94C;
+}
+#carbsKey{
+	height: 10px;
+	width: 50%;
+	background-color: #E27A3F;
+}
